@@ -46,6 +46,17 @@ Chocolatey가 설치되어 있지 않다면 다음 단계를 따라 설치할 �
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
     
 3)Chocolatey 설치가 완료되면, 다음 명령어로 FFmpeg를 설치할 수 있습니다:
- 
+``` 
 choco install ffmpeg
+```
+4) huggingface 생성형 ai실습
+```
+pip install -U transformers datasets evaluate accelerate timm
+pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+pip install matplotlib
+pip install diffusers
+pip install huggingface_hub[all]
+pip install ipykernel
+python -m ipykernel install --user --name hf_env
+pip install python-dotenv
 ```
